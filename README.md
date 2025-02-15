@@ -1,11 +1,15 @@
+
+     _______.  ______     ______   .______      ________         __  
+    /       | /  __  \   /  __  \  |   _  \    |       /        |  | 
+   |   (----`|  |  |  | |  |  |  | |  |_)  |   `---/  /         |  | 
+    \   \    |  |  |  | |  |  |  | |      /       /  /    .--.  |  | 
+.----)   |   |  `--'  | |  `--'  | |  |\  \----. /  /----.|  `--'  | 
+|_______/     \______/   \______/  | _| `._____|/________| \______/  
+                                                                     
+
 - 👋 Hi, I’m @soorzj
-- 👀 I do coding in java, c#
+- 🧑🏻‍💻 I do coding in java, c#
 - 🌱 I’m currently learning c#
 - 💞️ I’m looking to collaborate on desktop standalone apps
-- 📫 How to reach me instagram.com/soorzj
+- 📫 How to reach me instagram.com/soorzj or mail at soorzj.proton.me
 
-
-<!---
-soorzj/soorzj is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
