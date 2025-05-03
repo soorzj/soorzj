@@ -8,8 +8,8 @@
                                                                     
 ```
 - 👋 Hi, I’m @soorzj
-- 🧑🏻‍💻 I do coding in java, c#
+- 🧑🏻‍💻 I do coding in java, c#, HTML
 - 🌱 I’m currently learning c#
 - 💞️ I’m looking to collaborate on desktop standalone apps
-- 📫 How to reach me instagram.com/soorzj or mail at soorzj.proton.me
+- 📫 How to reach me -  mail at soorzj.proton.me
 
