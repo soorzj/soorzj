@@ -13,4 +13,3 @@
 - 💞️ I’m looking to collaborate on desktop standalone apps
 - 📫 How to reach me -  mail at soorzj.proton.me
   
-⚠ This account is not related to other accounts which may have the same username/handle
