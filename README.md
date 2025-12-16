@@ -7,7 +7,7 @@
 |_______/     \______/   \______/  | _| `._____|/________| \______/  
                                                                     
 ```
-VISIT
+Visit to know more
 # [soorzj.github.io/soorzj](https://soorzj.github.io/soorzj/) 
-TO KNOW MORE
+
   
