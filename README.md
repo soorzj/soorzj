@@ -7,7 +7,6 @@
 |_______/     \______/   \______/  | _| `._____|/________| \______/  
                                                                     
 ```
-Visit to know more
-# [soorzj.github.io/soorzj](https://soorzj.github.io/soorzj/) 
+# [Visit Portfolio to know more](https://soorzj.github.io/soorzj/) 
 
   
