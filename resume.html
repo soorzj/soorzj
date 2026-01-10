@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>soorzj — Dynamic Resume</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Roboto+Serif:wght@200;300;400&display=swap" rel="stylesheet">
+
+
+<style>
+@font-face {
+  font-family: "KathyStyleBold";
+  src: url("https://raw.githubusercontent.com/soorzj/soorzj/main/assets/KathyStyle-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+  body {
+    margin: 0;
+    font-family:  Jost, sans-serif;
+    background: linear-gradient(#fff6e6, #f2b233);
+    color: #333;
+  }
+
+  .page {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #fff;
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  /* LEFT PANEL */
+  .sidebar {
+    width: 260px;
+    padding: 25px;
+    background: #fafafa;
+    border-right: 1px solid #ddd;
+  }
+
+  .profile-img {
+    width: 240px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: KathyStyleBold, sans-serif;
+    color: #ff7a00;
+  }
+
+  .role {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 8px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .links a {
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    color: #3366cc;
+    text-decoration: none;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+
+  /* MAIN CONTENT */
+  .content {
+    flex: 1;
+    padding: 30px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  section h2 {
+    color: #ff7a00;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  .card h3 {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #eee;
+    padding: 4px 8px;
+    margin: 4px 4px 0 0;
+    border-radius: 4px;
+    font-size: 12px;
+    height: 15px;
+  }
+    .Skillsbadge {
+    display: inline-block;
+    background: #eee;
+    padding: 4px 8px;
+    margin: 4px 4px 0 0;
+    border-radius: 4px;
+    font-size: 16px;
+    height: 20px;
+  }
+  h2
+  {
+    font-family: 'KathyStyleBold', Times, serif;
+  }
+
+
+  .edu-item {
+    margin-bottom: 15px;
+  }
+
+  .edu-item strong {
+    display: block;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <img src="https://d.imgvision.net/soorzj/dsdss.jpg" class="profile-img" alt="Profile">
+
+    <div class="name" style="font-size: 40px">soorzj</div>
+    <div class="name">Sooraj Krishna S</div>
+    <div class="role">Web Developer | Student</div>
+
+    <p style="margin-left: 10px;">
+      I make web projects for fun. Loves teamwork and working as support staff. Get in touch for tech assistance or for a website.
+    </p>
+
+    <div class="links" id="links"></div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <section>
+      <h2>About Me</h2>
+      <p id="about"></p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <p id="aboutSkills"></p>
+      <div class="grid" id="skills" style="font-weight: bold"></div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="grid" id="projects"></div>
+    </section>
+
+    <section>
+      <h2>Qualifications</h2>
+      <div id="education"></div>
+    </section>
+
+  </main>
+
+</div>
+
+<script>
+/* ========= EDIT ONLY BELOW THIS LINE ========= */
+
+// ABOUT ME
+const aboutMe = `
+I am a passionate web developer and coder who enjoys building clean, functional, resource-efficient,
+and creative projects. I like learning new technologies and improving systems over time.
+`;
+const aboutSkills = `
+I've learned a lot about computers and tech, I've mastered a few skills along the way. Still learning more every day!
+`;
+
+// LINKS
+const links = [
+  { name: "GitHub", url: "https://github.com/username" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/username" },
+  { name: "Portfolio", url: "https://yourwebsite.com" }
+];
+
+// SKILLS
+const skills = [
+  "HTML5",
+  "CSS",
+  "JavaScript",
+  "Git",
+  "Firebase",
+  "Python",
+  "Java",
+  "UI/UX Design"
+];
+
+// PROJECTS
+const projects = [
+  {
+    title: "Guide to DODI REPACKS",
+    description: "Biggest Project i've done till date. Worked on this for over a month, researching for hours each day and building the guide from scratch.",
+    tech: ["HTML5", "CSS", "JavaScript"]
+  },
+  {
+    title: "Christmas Pair Selector",
+    description: "Short leisure project showcasing creativity and design skills. Made for Christmas celebrations. No scratch idea goes unpolished to perfection.",
+    tech: ["HTML5", "CSS", "JavaScript"]
+  },
+  {
+    title: "Secret Santa",
+    description: "Fun time project made to explore randomization algorithms, user data storage and user interactivity using Firebase as backend.",
+    tech: ["HTML5", "CSS", "JavaScript", "Firebase"]
+  },
+  {
+    title: "TextBook Searcher",
+    description: "A simple web app to search for textbooks online across multiple platforms, exploring more creativity with JavaScript. Still under work. Built to help students find books easily.",
+    tech: ["HTML5", "CSS", "JavaScript"]
+  }
+];
+
+
+const education = [
+  {
+    title: "Bachelor's Degree in Electrical and Computer Engineering",
+    place: "College of Engineering Trivandrum",
+    year: "2025 – 2029"
+  },
+  {
+    title: "Higher Secondary Education",
+    place: "Christ Nagar Higher Secondary School, Trivandrum",
+    year: "2024"
+  }
+];
+
+/* ========= RENDER LOGIC ========= */
+
+// About
+document.getElementById("about").textContent = aboutMe;
+
+// Links
+const linksBox = document.getElementById("links");
+links.forEach(link => {
+  const a = document.createElement("a");
+  a.href = link.url;
+  a.textContent = link.name;
+  a.target = "_blank";
+  linksBox.appendChild(a);
+});
+
+// Skills
+const skillsBox = document.getElementById("skills");
+document.getElementById("aboutSkills").textContent = aboutSkills;
+skills.forEach(skill => {
+  const div = document.createElement("div");
+  div.className = "Skillsbadge";
+  div.textContent = skill;
+  skillsBox.appendChild(div);
+});
+
+// Projects
+const projectsBox = document.getElementById("projects");
+projects.forEach(project => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  card.innerHTML = `
+    <h3>${project.title}</h3>
+    <p>${project.description}</p>
+    ${project.tech.map(t => `<span class="badge">${t}</span>`).join("")}
+  `;
+
+  projectsBox.appendChild(card);
+});
+
+// Education
+const eduBox = document.getElementById("education");
+education.forEach(item => {
+  const div = document.createElement("div");
+  div.className = "edu-item";
+  div.innerHTML = `
+    <strong>${item.title}</strong>
+    ${item.place}<br>
+    <em>${item.year}</em>
+  `;
+  eduBox.appendChild(div);
+});
+</script>
+
+</body>
+</html>
